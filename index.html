@@ -18,11 +18,13 @@
   <body>
     <!-- ------------------The Nav Bar-------------------->
     <header class="parent-container header">
-      <a href="#" class="flex-item-1">My Logo</a>
+      <a href="#home" class="flex-item-1">My Logo</a>
       <nav>
         <ul>
           <li class="mobile-nav-items">
-            <a href="#"><i class="fa-solid fa-bars flex-item-2"></i></a>
+            <a href="#" title="Menu bars"
+              ><i class="fa-solid fa-bars flex-item-2"></i
+            ></a>
           </li>
           <li class="desktop-nav-items">
             <a href="#portfolio" class="nav-link">Portfolio</a>
@@ -38,7 +40,7 @@
     </header>
     <!-- -------------------------------The Home Page---------------------------------- -->
     <main class="main-container">
-      <section class="main-page">
+      <section class="main-page" id="home">
         <div class="home-page-details">
           <h1 class="home-margin-bottom">I'm Amen<br />Glad to see you!</h1>
           <p class="about-me-text home-margin-bottom">
@@ -93,11 +95,11 @@
               <h2 class="work-title">Tonic</h2>
               <ul>
                 <li><h3 class="work-client h3-common-styles">CANOPY</h3></li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li><img src="images/dot.png" alt="Canopy icon image" /></li>
                 <li>
                   <h3 class="work-role h3-common-styles">Back End Dev</h3>
                 </li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li><img src="images/dot.png" alt="Backend icon image" /></li>
                 <li><h3 class="work-year h3-common-styles">2015</h3></li>
               </ul>
               <p class="work-description">
@@ -135,11 +137,13 @@
               </h2>
               <ul>
                 <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li><img src="images/dot.png" alt="Facebook icon image" /></li>
                 <li>
                   <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
                 </li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li>
+                  <img src="images/dot.png" alt="Full-Stack icon image" />
+                </li>
                 <li><h3 class="work-year h3-common-styles">2015</h3></li>
               </ul>
               <p class="work-description">
@@ -174,11 +178,15 @@
               <h2 class="work-title">Facebook 360</h2>
               <ul>
                 <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li>
+                  <img src="images/dot.png" alt="Facebook 360 icon image" />
+                </li>
                 <li>
                   <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
                 </li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li>
+                  <img src="images/dot.png" alt="Full Stack icon image" />
+                </li>
                 <li><h3 class="work-year h3-common-styles">2015</h3></li>
               </ul>
               <p class="work-description">
@@ -213,11 +221,11 @@
               <h2 class="work-title">Uber Navigation</h2>
               <ul>
                 <li><h3 class="work-client h3-common-styles">UBER</h3></li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li><img src="images/dot.png" alt="Uber icon image" /></li>
                 <li>
                   <h3 class="work-role h3-common-styles">Lead Developer</h3>
                 </li>
-                <li><img src="images/dot.png" alt="Dot icon image" /></li>
+                <li><img src="images/dot.png" alt="Leed Dev icon image" /></li>
                 <li><h3 class="work-year h3-common-styles">2018</h3></li>
               </ul>
               <p class="work-description">
@@ -278,23 +286,23 @@
           <div class="languages-container">
             <div class="languages-wraper">
               <div class="list-item">
-                <h4 class="lang-heading">Languages</h4>
+                <h3 class="lang-heading">Languages</h3>
                 <i class="fa-solid fa-angle-down"></i>
               </div>
               <ul class="language-list">
                 <li class="list-item-icon">
                   <img
                     src="images/javascript.png"
-                    alt="Javascript icon image"
+                    alt="Image showing a JavaScript Icon"
                   />
                   <h4 class="lang-name">Javascript</h4>
                 </li>
                 <li class="list-item-icon">
-                  <img src="images/html.png" alt="HTML icon image" />
+                  <img src="images/html.png" alt="Image showing an HTML icon" />
                   <h4 class="lang-name">HTML</h4>
                 </li>
                 <li class="list-item-icon">
-                  <img src="images/css.png" alt="CSS icon image" />
+                  <img src="images/css.png" alt="CSS icon image shown" />
                   <h4 class="lang-name">CSS</h4>
                 </li>
               </ul>
@@ -322,32 +330,41 @@
         <form action="https://formspree.io/f/mzbqzrae" method="POST">
           <ul class="contact-form">
             <li>
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value="John Doe"
-                maxlength="30"
-                required
-              />
+              <label for="name">
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value="John Doe"
+                  maxlength="30"
+                  required
+                />
+              </label>
             </li>
             <li>
-              <input
-                type="email"
-                name="email"
-                placeholder="email@email.com"
-                value="johndoe@gmail.com"
-                required
-              />
+              <label for="email">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="email@email.com"
+                  value="johndoe@gmail.com"
+                  required
+                />
+              </label>
             </li>
             <li>
-              <textarea
-                name="message"
-                type="text"
-                maxlength="500"
-                placeholder="Write your message here"
-                required
-              ></textarea>
+              <label for="message">
+                <textarea
+                  id="message"
+                  name="message"
+                  type="text"
+                  maxlength="500"
+                  placeholder="Write your message here"
+                  required
+                ></textarea>
+              </label>
             </li>
             <li>
               <button class="see-project-btn contact-btn-hover" type="submit">
