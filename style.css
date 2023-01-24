@@ -381,7 +381,7 @@ section ul .linked-in,
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-white);
-  background: #1a30ff;
+  background-color: #1a30ff;
 }
 
 .contact-flex-container {
