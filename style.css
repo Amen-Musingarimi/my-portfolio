@@ -29,9 +29,10 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f0f0f0;
   line-height: 1.7;
+  position: relative;
 }
 
 p {
@@ -70,10 +71,6 @@ p:hover {
   width: 100%;
 }
 
-.desktop-nav-items {
-  display: none;
-}
-
 .header nav a {
   padding-right: 24px;
   padding-top: 12px;
@@ -82,6 +79,48 @@ p:hover {
 
 .flex-item-2 {
   width: 50%;
+}
+
+/* -- -------------------------------Styling the Mobile Menu---------------------------------- -- */
+.hidden {
+  display: none;
+}
+
+.overlay {
+  width: 100vw;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 28px;
+  background-color: #6070ff;
+  opacity: 0.9;
+}
+
+.mobileMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mobileMenu > ul > li {
+  margin-bottom: 30px;
+}
+
+.mobileMenu > ul > li > a {
+  color: #fff;
+  font-weight: 400px;
+  font-size: 30px;
+}
+
+.menuList {
+  padding-top: 80px;
+}
+
+.closeModal {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 30px;
 }
 
 /* -- -------------------------------Styling the Home Page---------------------------------- -- */
@@ -94,7 +133,7 @@ p:hover {
 }
 
 .main-page {
-  background: url('images/background-header.jpg');
+  background: url("images/background-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom-left-radius: 80px;
@@ -376,7 +415,7 @@ section ul .linked-in,
 
 .contact-page {
   min-width: 100%;
-  border-top-left-radius: 80px;
+  border-top-left-radius: 106px;
   background-image: url(images/Contact-me-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -445,11 +484,17 @@ section ul .linked-in,
     padding: 16px 142px;
   }
 
-  .desktop-nav-items {
+  .mobileMenu > ul > li > a {
+    color: #000;
+    font-size: 15px;
+  }
+
+  .hidden {
     display: block;
   }
 
-  .mobile-nav-items {
+  .mobile-nav-bars,
+  .closeModal {
     display: none;
   }
 
@@ -467,7 +512,7 @@ section ul .linked-in,
   /* -- -------------------Styling the Home Page--------------------- -- */
 
   .main-page {
-    background: url('images/desktop-homeBG.jpeg');
+    background: url("images/desktop-homeBG.jpeg");
     padding: 140px 260px;
   }
 
@@ -630,8 +675,8 @@ section ul .linked-in,
 
   /* -- -------------------Styling the Contact Page--------------------- -- */
   .contact-page {
-    border-top-right-radius: 80px;
-    background-image: url('images/desktop-contact.png');
+    border-top-left-radius: 80px;
+    background-image: url("images/desktop-contact.png");
     padding: 142px 320px 127px 320px;
     background-position: center center;
     background-size: cover;
