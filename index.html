@@ -18,24 +18,29 @@
   <body>
     <!-- ------------------The Nav Bar-------------------->
     <header class="parent-container header">
-      <a href="#home" class="flex-item-1">My Logo</a>
+      <a href="#home" class="flex-item-1 logo">My Logo</a>
       <nav>
-        <ul>
-          <li class="mobile-nav-items">
-            <a href="#" title="Menu bars"
-              ><i class="fa-solid fa-bars flex-item-2"></i
+        <a href="#" title="Menu bars" class="mobile-nav-bars openModal"
+          ><i class="fa-solid fa-bars flex-item-2"></i
+        ></a>
+        <div class="menuContainer hidden">
+          <div class="mobileMenu">
+            <ul class="menuList">
+              <li>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <a href="#" class="closeModal hidden"
+              ><i class="fa-solid fa-xmark"></i
             ></a>
-          </li>
-          <li class="desktop-nav-items">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-          </li>
-          <li class="desktop-nav-items">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="desktop-nav-items">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- -------------------------------The Home Page---------------------------------- -->
@@ -54,7 +59,9 @@
             <div>
               <ul class="social-links-container">
                 <li class="twitter">
-                  <a href="https://twitter.com/tunchi_a"><img src="images/twitter.png" /></a>
+                  <a href="https://twitter.com/tunchi_a"
+                    ><img src="images/twitter.png"
+                  /></a>
                 </li>
                 <li class="linked-in">
                   <a href="https://www.linkedin.com/in/atmusingarimi/"
@@ -63,13 +70,19 @@
                   /></a>
                 </li>
                 <li class="message">
-                  <a href="https://medium.com/@takudzwamusinga"><img src="images/M.png" /></a>
+                  <a href="https://medium.com/@takudzwamusinga"
+                    ><img src="images/M.png"
+                  /></a>
                 </li>
                 <li class="cat-icon">
-                  <a href="https://github.com/Amen-Musingarimi"><img src="images/cat.png" /></a>
+                  <a href="https://github.com/Amen-Musingarimi"
+                    ><img src="images/cat.png"
+                  /></a>
                 </li>
                 <li class="thumbs-up">
-                  <a href="https://github.com/Amen-Musingarimi"><img src="images/thumps.png" /></a>
+                  <a href="https://github.com/Amen-Musingarimi"
+                    ><img src="images/thumps.png"
+                  /></a>
                 </li>
               </ul>
             </div>
@@ -261,7 +274,9 @@
             <h2 class="social-links-heading flex-item">LET'S CONNECT</h2>
             <ul class="social-links-container flex-item">
               <li class="twitter">
-                <a href="https://twitter.com/tunchi_a"><img src="images/twitter.png" /></a>
+                <a href="https://twitter.com/tunchi_a"
+                  ><img src="images/twitter.png"
+                /></a>
               </li>
               <li class="linked-in">
                 <a href="https://www.linkedin.com/in/atmusingarimi/"
@@ -270,13 +285,19 @@
                 /></a>
               </li>
               <li class="message">
-                <a href="https://medium.com/@takudzwamusinga"><img src="images/M.png" /></a>
+                <a href="https://medium.com/@takudzwamusinga"
+                  ><img src="images/M.png"
+                /></a>
               </li>
               <li class="cat-icon">
-                <a href="https://github.com/Amen-Musingarimi"><img src="images/cat.png" /></a>
+                <a href="https://github.com/Amen-Musingarimi"
+                  ><img src="images/cat.png"
+                /></a>
               </li>
               <li class="thumbs-up">
-                <a href="https://github.com/Amen-Musingarimi"><img src="images/thumps.png" /></a>
+                <a href="https://github.com/Amen-Musingarimi"
+                  ><img src="images/thumps.png"
+                /></a>
               </li>
             </ul>
             <button class="see-project-btn margin-reset" type="button" download>
@@ -375,5 +396,6 @@
         </form>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

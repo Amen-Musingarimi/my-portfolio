@@ -32,6 +32,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #f0f0f0;
   line-height: 1.7;
+  position: relative;
 }
 
 p {
@@ -70,10 +71,6 @@ p:hover {
   width: 100%;
 }
 
-.desktop-nav-items {
-  display: none;
-}
-
 .header nav a {
   padding-right: 24px;
   padding-top: 12px;
@@ -82,6 +79,54 @@ p:hover {
 
 .flex-item-2 {
   width: 50%;
+  color: #142cff;
+}
+
+/* -- -------------------------------Styling the Mobile Menu---------------------------------- -- */
+.hidden {
+  display: none;
+}
+
+.overlay {
+  width: 100vw;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 28px;
+  background-color: #6070ff;
+  opacity: 0.9;
+}
+
+.blurry-text {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0);
+}
+
+.mobileMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mobileMenu > ul > li {
+  margin-bottom: 30px;
+}
+
+.mobileMenu > ul > li > a {
+  color: #fff;
+  font-weight: 400px;
+  font-size: 30px;
+}
+
+.menuList {
+  padding-top: 80px;
+}
+
+.closeModal {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 30px;
 }
 
 /* -- -------------------------------Styling the Home Page---------------------------------- -- */
@@ -376,7 +421,7 @@ section ul .linked-in,
 
 .contact-page {
   min-width: 100%;
-  border-top-left-radius: 80px;
+  border-top-left-radius: 106px;
   background-image: url(images/Contact-me-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -440,16 +485,37 @@ section ul .linked-in,
 
 @media all and (min-width: 1024px) {
   /* -- ------------------The Nav Bar-------------------- */
+  .parent-container {
+    align-items: center;
+  }
 
   .header {
     padding: 16px 142px;
   }
 
-  .desktop-nav-items {
+  .menuList {
+    padding: 0;
+  }
+
+  .mobileMenu > ul > li {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .mobileMenu > ul > li > a {
+    color: #000;
+    font-size: 15px;
+  }
+
+  .hidden {
     display: block;
   }
 
-  .mobile-nav-items {
+  .mobile-nav-bars,
+  .closeModal {
     display: none;
   }
 
@@ -630,7 +696,7 @@ section ul .linked-in,
 
   /* -- -------------------Styling the Contact Page--------------------- -- */
   .contact-page {
-    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
     background-image: url('images/desktop-contact.png');
     padding: 142px 320px 127px 320px;
     background-position: center center;
