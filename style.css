@@ -86,16 +86,9 @@ p:hover {
   display: none;
 }
 
-.overlay {
-  width: 100vw;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 28px;
-  background-color: #6070ff;
-  opacity: 0.9;
-}
+/* -----overlay goes here-------- */
+
+/* -----blurry text goes  here-------- */
 
 .mobileMenu {
   display: flex;
@@ -479,9 +472,24 @@ section ul .linked-in,
 
 @media all and (min-width: 1024px) {
   /* -- ------------------The Nav Bar-------------------- */
+  .parent-container {
+    align-items: center;
+  }
 
   .header {
     padding: 16px 142px;
+  }
+
+  .menuList {
+    padding: 0;
+  }
+
+  .mobileMenu > ul > li {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    padding: 0;
   }
 
   .mobileMenu > ul > li > a {

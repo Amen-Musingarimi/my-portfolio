@@ -3,7 +3,8 @@
 const btnOpenMenu = document.querySelector(".openModal");
 const btnCloseMenu = document.querySelector(".closeModal");
 const modalMenu = document.querySelector(".menuContainer");
-const logo = document.querySelector(".logo");
+const navLinks = document.querySelectorAll(".nav-link");
+const body = document.querySelector("body");
 
 btnOpenMenu.addEventListener("click", function () {
   console.log("clicked");
@@ -11,7 +12,7 @@ btnOpenMenu.addEventListener("click", function () {
   modalMenu.classList.add("overlay");
   btnCloseMenu.classList.remove("hidden");
   btnOpenMenu.classList.add("hidden");
-  logo.classList.add("hidden");
+  body.classList.add("blurry-text");
 });
 
 btnCloseMenu.addEventListener("click", function () {
@@ -20,5 +21,15 @@ btnCloseMenu.addEventListener("click", function () {
   modalMenu.classList.remove("overlay");
   btnCloseMenu.classList.add("hidden");
   btnOpenMenu.classList.remove("hidden");
-  logo.classList.remove("hidden");
+  body.classList.remove("blurry-text");
 });
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    modalMenu.classList.add("hidden");
+    modalMenu.classList.remove("overlay");
+    btnCloseMenu.classList.add("hidden");
+    btnOpenMenu.classList.remove("hidden");
+    body.classList.remove("blurry-text");
+  });
+}
