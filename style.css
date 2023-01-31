@@ -97,7 +97,10 @@ p:hover {
   opacity: 0.9;
 }
 
-/* -----blurry text goes  here-------- */
+.blurry-text {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0);
+}
 
 .mobileMenu {
   display: flex;
