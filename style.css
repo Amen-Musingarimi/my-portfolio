@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #f0f0f0;
   line-height: 1.7;
   position: relative;
@@ -79,6 +79,7 @@ p:hover {
 
 .flex-item-2 {
   width: 50%;
+  color: #142cff;
 }
 
 /* -- -------------------------------Styling the Mobile Menu---------------------------------- -- */
@@ -138,7 +139,7 @@ p:hover {
 }
 
 .main-page {
-  background: url("images/background-header.jpg");
+  background: url('images/background-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom-left-radius: 80px;
@@ -532,7 +533,7 @@ section ul .linked-in,
   /* -- -------------------Styling the Home Page--------------------- -- */
 
   .main-page {
-    background: url("images/desktop-homeBG.jpeg");
+    background: url('images/desktop-homeBG.jpeg');
     padding: 140px 260px;
   }
 
@@ -696,7 +697,7 @@ section ul .linked-in,
   /* -- -------------------Styling the Contact Page--------------------- -- */
   .contact-page {
     border-top-left-radius: 80px;
-    background-image: url("images/desktop-contact.png");
+    background-image: url('images/desktop-contact.png');
     padding: 142px 320px 127px 320px;
     background-position: center center;
     background-size: cover;
