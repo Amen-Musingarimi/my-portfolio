@@ -7,7 +7,6 @@ const navLinks = document.querySelectorAll(".nav-link");
 const body = document.querySelector("body");
 
 btnOpenMenu.addEventListener("click", function () {
-  console.log("clicked");
   modalMenu.classList.remove("hidden");
   modalMenu.classList.add("overlay");
   btnCloseMenu.classList.remove("hidden");
@@ -16,7 +15,6 @@ btnOpenMenu.addEventListener("click", function () {
 });
 
 btnCloseMenu.addEventListener("click", function () {
-  console.log("Close btn clicked");
   modalMenu.classList.add("hidden");
   modalMenu.classList.remove("overlay");
   btnCloseMenu.classList.add("hidden");
