@@ -237,7 +237,7 @@ section ul .linked-in,
 }
 
 .works-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .desktop-work-img {
@@ -329,6 +329,68 @@ section ul .linked-in,
 .see-project-btn:active {
   color: #fff;
   background-color: #1d1d9e;
+}
+
+/* -- -------------------------------Styling The Popup Window---------------------------------- -- */
+.hide {
+  display: none;
+}
+
+.overlay {
+  width: 100vw;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  padding: 28px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.popupCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.marginBottom {
+  margin-bottom: 16px;
+}
+
+.paddingBottom {
+  padding-bottom: 12px;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  font-size: 26px;
+  color: #67798e;
+}
+
+.roleDetail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.skillsBtns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.previewBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #ebecf0;
+  padding-top: 30px;
 }
 
 /* -- -------------------------------Styling The About Myself Section---------------------------------- -- */
@@ -638,6 +700,23 @@ section ul .linked-in,
 
   .see-project-btn {
     background: var(--color-white);
+  }
+
+  /* -- -------------------Styling the Popup Window--------------------- -- */
+  .overlay {
+    min-height: 100%;
+    position: absolute;
+    padding: 77px 142px 337px 142px;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  .previewBtns {
+    justify-content: space-between;
   }
 
   /* -- -------------------Styling the About Myself Page--------------------- -- */
