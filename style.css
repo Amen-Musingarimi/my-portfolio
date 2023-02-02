@@ -720,6 +720,10 @@ section ul .linked-in,
     background-color: rgba(193, 199, 208, 0.884);
   }
 
+  .heightAdjust {
+    max-height: 1000px;
+  }
+
   .pop {
     max-width: 1156px;
     max-height: 1163px;

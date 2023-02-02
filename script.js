@@ -47,7 +47,7 @@ const portfolioArray = [
     company: 'CANOPY',
     role: 'Back End Dev',
     year: 2015,
-    portfolioImageDesktop: 'images/desktop-work1.png',
+    portfolioImageDesktop: 'images/desktop-work11.png',
     description: descriptionText,
     htmlSkill: 'html',
     cssSkill: 'css',
@@ -113,9 +113,9 @@ popupContainer.innerHTML = `
   <h3 class="projectYear"></h3>
 </div>
 <img
-  src=""
-  alt="My firts portfolio work"
-  class="workImageDesktop"
+src=""
+alt="My firts portfolio work"
+class="workImageDesktop"
 />
 <div class="projectDetails details">
   <p class="projectDescription marginBottom"></p>
@@ -142,23 +142,14 @@ function scrollUp() {
 }
 
 const workTitle = document.querySelector('.workTitle');
-
 const clientName = document.querySelector('.clientName');
-
 const roleOccupied = document.querySelector('.roleOccupied');
-
 const projectYear = document.querySelector('.projectYear');
-
 const workImageDesktop = document.querySelector('.workImageDesktop');
-
 const projectDescription = document.querySelector('.projectDescription');
-
 const htmlBtn = document.querySelector('.htmlBtn');
-
 const cssBtn = document.querySelector('.cssBtn');
-
 const javascriptBtn = document.querySelector('.javascriptBtn');
-
 const closeBtn = document.querySelector('.closeBtn');
 
 // ---------------------------Work 1 ----------------------------------------
@@ -166,7 +157,7 @@ const seeWork1Btn = document.querySelector('.seeWork1Btn');
 seeWork1Btn.addEventListener('click', () => {
   scrollUp();
   popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
+  popupWindow.classList.add('overlay', 'heightAdjust');
   workTitle.innerHTML = portfolioArray[0].projectName;
   workTitle.classList.add('work-title');
   clientName.innerHTML = portfolioArray[0].company;
@@ -191,7 +182,7 @@ seeWork1Btn.addEventListener('click', () => {
 const seeWork2Btn = document.querySelector('.seeWork2Btn');
 seeWork2Btn.addEventListener('click', () => {
   scrollUp();
-  popupWindow.classList.remove('hide');
+  popupWindow.classList.remove('hide', 'heightAdjust');
   popupWindow.classList.add('overlay');
   workTitle.innerHTML = portfolioArray[1].projectName;
   workTitle.classList.add('work-title');
