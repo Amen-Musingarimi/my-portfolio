@@ -340,7 +340,15 @@ section ul .linked-in,
 }
 
 /* -- -------------------------------Styling The Popup Window---------------------------------- -- */
-/*paste here*/
+.hide {
+  display: none;
+}
+
+.popupCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
 .marginBottom {
   margin-bottom: 16px;
