@@ -24,9 +24,9 @@
 
 **[Microverse-Portfolio-Project]** is a portifolio website that shows information about me and the work that I have done.
 
-## 🛠 Built With <a name="html and css"></a>
+## 🛠 Built With <a name="html, css and javaScript"></a>
 
-### Tech Stack <a name="html and css"></a>
+### Tech Stack <a name="html, css and javaScript"></a>
 
 <details>
   <ul>
@@ -40,6 +40,12 @@
   </ul>
 </details>
 
+<details>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -48,6 +54,9 @@
 - **[home_page]**
 - **[works_page]**
 - **[about_myself_page]**
+- **[contact_page]**
+- **[mobile_navigation_popup]**
+- **[see_project_popup]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,6 +113,8 @@ You can deploy this project using Heroku.
 - [ ] **[portifolio_page]**
 - [ ] **[about_me_page]**
 - [ ] **[contact_me_page]**
+- [ ] **[mobile_navigation_popup]**
+- [ ] **[see_project_popup]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

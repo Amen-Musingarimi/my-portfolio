@@ -87,23 +87,15 @@ p:hover {
   display: none;
 }
 
-.overlay {
-  width: 100vw;
-  min-height: 100%;
+.mobileOverlay {
   position: absolute;
   top: 0;
   left: 0;
   padding: 0 28px;
   opacity: 0.9;
-}
-
-.overlayWhite {
-  background-color: #fff;
-  opacity: 1;
-}
-
-.mobileBlueOverlay {
   background-color: #6070ff;
+  width: 100vw;
+  min-height: 162vh;
 }
 
 .blurry-text {
@@ -248,10 +240,6 @@ section ul .linked-in,
   transform: scale(1.02);
 }
 
-.desktop-work-img {
-  display: none;
-}
-
 .works-details {
   display: flex;
   flex-direction: column;
@@ -344,6 +332,22 @@ section ul .linked-in,
   display: none;
 }
 
+.overlay {
+  min-width: 343px;
+  max-width: 713px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(193, 199, 208, 0.884);
+}
+
+.pop {
+  background-color: #fff;
+  margin: 60px 16px 50px 16px;
+  padding: 14px;
+  border-radius: 8px;
+}
+
 .popupCard {
   display: flex;
   flex-direction: column;
@@ -390,6 +394,11 @@ section ul .linked-in,
   justify-content: space-around;
   border-top: 1px solid #ebecf0;
   padding-top: 30px;
+}
+
+.dynamicBTns {
+  color: #6070ff;
+  background-color: #fff;
 }
 
 /* -- -------------------------------Styling The About Myself Section---------------------------------- -- */
@@ -703,8 +712,8 @@ section ul .linked-in,
 
   /* -- -------------------Styling the Popup Window--------------------- -- */
   .overlay {
-    width: 100vw;
-    min-height: 100%;
+    max-width: 1440px;
+    max-height: 1280px;
     position: absolute;
     top: 0;
     padding: 0;
@@ -712,6 +721,8 @@ section ul .linked-in,
   }
 
   .pop {
+    max-width: 1156px;
+    max-height: 1163px;
     background-color: #fff;
     margin: 77px 142px 337px 142px;
     padding: 14px;
