@@ -270,3 +270,17 @@ closeBtn.addEventListener('click', () => {
   popupWindow.classList.add('hide');
   popupWindow.classList.remove('overlay');
 });
+
+//Contact Form Validation-------------------------------------------------------------
+const email = document.querySelector('.email');
+
+function validateForm(e) {
+  if (email.value !== email.value.toLowerCase()) {
+    document.querySelector('.errorMessage').classList.remove('hide');
+    e.preventDefault();
+    e.stopPropagation();
+  }
+}
+
+const contactForm = document.forms['contactForm'];
+contactForm.addEventListener('submit', validateForm);

@@ -337,7 +337,11 @@
           with it
         </p>
 
-        <form action="https://formspree.io/f/mzbqzrae" method="POST">
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/mzbqzrae"
+          method="POST"
+        >
           <ul class="contact-form">
             <li>
               <label for="name">
@@ -355,7 +359,7 @@
             <li>
               <label for="email">
                 <input
-                  id="email"
+                  class="email"
                   type="email"
                   name="email"
                   placeholder="email@email.com"
@@ -375,6 +379,11 @@
                   required
                 ></textarea>
               </label>
+            </li>
+            <li>
+              <p class="errorMessage hide">
+                Please fill your email in lowercases
+              </p>
             </li>
             <li>
               <button class="see-project-btn contact-btn-hover" type="submit">
