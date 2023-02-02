@@ -94,8 +94,16 @@ p:hover {
   top: 0;
   left: 0;
   padding: 0 28px;
-  background-color: #6070ff;
   opacity: 0.9;
+}
+
+.overlayWhite {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.mobileBlueOverlay {
+  background-color: #6070ff;
 }
 
 .blurry-text {
@@ -332,25 +340,7 @@ section ul .linked-in,
 }
 
 /* -- -------------------------------Styling The Popup Window---------------------------------- -- */
-.hide {
-  display: none;
-}
-
-.overlay {
-  width: 100vw;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  padding: 28px;
-  background-color: #fff;
-  opacity: 1;
-}
-
-.popupCard {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
+/*paste here*/
 
 .marginBottom {
   margin-bottom: 16px;
@@ -364,6 +354,7 @@ section ul .linked-in,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 12px;
 }
 
 .closeBtn {
@@ -704,9 +695,19 @@ section ul .linked-in,
 
   /* -- -------------------Styling the Popup Window--------------------- -- */
   .overlay {
+    width: 100vw;
     min-height: 100%;
     position: absolute;
-    padding: 77px 142px 337px 142px;
+    top: 0;
+    padding: 0;
+    background-color: rgba(193, 199, 208, 0.884);
+  }
+
+  .pop {
+    background-color: #ffffff;
+    margin: 77px 142px 337px 142px;
+    padding: 14px;
+    border-radius: 8px;
   }
 
   .details {
@@ -729,6 +730,10 @@ section ul .linked-in,
 
   .about-myself-details {
     padding-left: 0;
+  }
+
+  .projectHeader {
+    padding-top: 0;
   }
 
   .about-myself-heading {

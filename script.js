@@ -7,7 +7,7 @@ const body = document.querySelector('body');
 // Opening mobile menu
 const openMenu = function openModal() {
   modalMenu.classList.remove('hidden');
-  modalMenu.classList.add('overlay');
+  modalMenu.classList.add('overlay', 'mobileBlueOverlay');
   btnCloseMenu.classList.remove('hidden');
   btnOpenMenu.classList.add('hidden');
   body.classList.add('blurry-text');
@@ -18,7 +18,7 @@ btnOpenMenu.addEventListener('click', openMenu);
 // Close menu button
 const closeMenuBtn = function closeMenu() {
   modalMenu.classList.add('hidden');
-  modalMenu.classList.remove('overlay');
+  modalMenu.classList.remove('overlay', 'mobileBlueOverlay');
   btnCloseMenu.classList.add('hidden');
   btnOpenMenu.classList.remove('hidden');
   body.classList.remove('blurry-text');
@@ -28,7 +28,7 @@ btnCloseMenu.addEventListener('click', closeMenuBtn);
 // Close menu after clicking menu option
 const closeOnClick = function close() {
   modalMenu.classList.add('hidden');
-  modalMenu.classList.remove('overlay');
+  modalMenu.classList.remove('overlay', 'mobileBlueOverlay');
   btnCloseMenu.classList.add('hidden');
   btnOpenMenu.classList.remove('hidden');
   body.classList.remove('blurry-text');
@@ -38,11 +38,10 @@ for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', closeOnClick);
 }
 
-//-----------------------------Popup window------------------------------------------------
+// -----------------------------Popup window------------------------------------------------
 const descriptionText =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
 const portfolioArray = [
-  ['html', 'Ruby on rails', 'css', 'javascript'],
   {
     projectName: 'Tonic',
     company: 'CANOPY',
@@ -51,7 +50,10 @@ const portfolioArray = [
     portfolioImageMobile: 'images/work1.png',
     portfolioImageDesktop: 'images/desktop-work1.png',
     description: descriptionText,
-    buttons: ['See Live', 'See Source'],
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    buttons: [],
   },
 
   {
@@ -62,7 +64,10 @@ const portfolioArray = [
     portfolioImageMobile: 'images/work2.png',
     portfolioImageDesktop: 'images/desktop-work2.png',
     description: descriptionText,
-    buttons: ['See Live', 'See Source'],
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    buttons: [],
   },
 
   {
@@ -73,7 +78,10 @@ const portfolioArray = [
     portfolioImageMobile: 'images/work3.png',
     portfolioImageDesktop: 'images/desktop-work3.png',
     description: descriptionText,
-    buttons: ['See Live', 'See Source'],
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    buttons: [],
   },
 
   {
@@ -84,12 +92,16 @@ const portfolioArray = [
     portfolioImageMobile: 'images/work4.png',
     portfolioImageDesktop: 'images/desktop-work4.png',
     description: descriptionText,
-    buttons: ['See Live', 'See Source'],
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    buttons: [],
   },
 ];
 
 const popupWindow = document.querySelector('.popupWindow');
 const popupContainer = document.createElement('div');
+popupContainer.classList.add('pop');
 popupWindow.appendChild(popupContainer);
 popupContainer.innerHTML = `
 <div class="popupCard">
@@ -123,8 +135,10 @@ popupContainer.innerHTML = `
       <button class="javascriptBtn" type="button"></button>
     </div>
     <div class="buttons previewBtns">
-      <button class="seeLive" type="button"></button>
-      <button class="seeSource" type="button"></button>
+      <button class="see-project-btn" type="button">   See Live
+      <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+      <button class="see-project-btn" type="button"> See Source
+      <i class="fa-brands fa-github"></i></button>
     </div>
   </div>
 </div>
@@ -156,19 +170,42 @@ const cssBtn = document.querySelector('.cssBtn');
 
 const javascriptBtn = document.querySelector('.javascriptBtn');
 
-const seeLive = document.querySelector('.seeLive');
-
-const seeSource = document.querySelector('.seeSource');
-
 const closeBtn = document.querySelector('.closeBtn');
 
-//---------------------------Work 1 ----------------------------------------
+// ---------------------------Work 1 ----------------------------------------
 const seeWork1Btn = document.querySelector('.seeWork1Btn');
 seeWork1Btn.addEventListener('click', () => {
   scrollUp();
-  console.log('Work ! button clicked');
   popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
+  popupWindow.classList.add('overlay', 'overlayWhite');
+  workTitle.innerHTML = portfolioArray[0].projectName;
+  workTitle.classList.add('work-title');
+  clientName.innerHTML = portfolioArray[0].company;
+  clientName.classList.add('work-client', 'h3-common-styles');
+  roleOccupied.innerHTML = portfolioArray[0].role;
+  roleOccupied.classList.add('work-role', 'h3-common-styles');
+  projectYear.innerHTML = portfolioArray[0].year;
+  projectYear.classList.add('work-year', 'h3-common-styles');
+  work1ImageMobile.setAttribute('src', portfolioArray[0].portfolioImageMobile);
+  work1ImageMobile.classList.add('works-image', 'mobile-work-img');
+  workImageDesktop.setAttribute('src', portfolioArray[0].portfolioImageDesktop);
+  workImageDesktop.classList.add('works-image', 'desktop-work-img');
+  projectDescription.innerHTML = portfolioArray[0].description;
+  projectDescription.classList.add('work-description');
+  htmlBtn.innerHTML = portfolioArray[0].htmlSkill;
+  htmlBtn.classList.add('works-btn');
+  cssBtn.innerHTML = portfolioArray[0].cssSkill;
+  cssBtn.classList.add('works-btn');
+  javascriptBtn.innerHTML = portfolioArray[0].javascriptSkill;
+  javascriptBtn.classList.add('works-btn');
+});
+
+// ---------------------------Work 2 ----------------------------------------
+const seeWork2Btn = document.querySelector('.seeWork2Btn');
+seeWork2Btn.addEventListener('click', () => {
+  scrollUp();
+  popupWindow.classList.remove('hide');
+  popupWindow.classList.add('overlay', 'overlayWhite');
   workTitle.innerHTML = portfolioArray[1].projectName;
   workTitle.classList.add('work-title');
   clientName.innerHTML = portfolioArray[1].company;
@@ -183,25 +220,20 @@ seeWork1Btn.addEventListener('click', () => {
   workImageDesktop.classList.add('works-image', 'desktop-work-img');
   projectDescription.innerHTML = portfolioArray[1].description;
   projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[0][0];
+  htmlBtn.innerHTML = portfolioArray[1].htmlSkill;
   htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[0][2];
+  cssBtn.innerHTML = portfolioArray[1].cssSkill;
   cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[0][3];
+  javascriptBtn.innerHTML = portfolioArray[1].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
-  seeLive.innerHTML = portfolioArray[1].buttons[0];
-  seeLive.classList.add('see-project-btn');
-  seeSource.innerHTML = portfolioArray[1].buttons[1];
-  seeSource.classList.add('see-project-btn');
 });
 
-//---------------------------Work 2 ----------------------------------------
-const seeWork2Btn = document.querySelector('.seeWork2Btn');
-seeWork2Btn.addEventListener('click', () => {
+// ---------------------------Work 3 ----------------------------------------
+const seeWork3Btn = document.querySelector('.seeWork3Btn');
+seeWork3Btn.addEventListener('click', () => {
   scrollUp();
-  console.log('Work 2 button clicked');
   popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
+  popupWindow.classList.add('overlay', 'overlayWhite');
   workTitle.innerHTML = portfolioArray[2].projectName;
   workTitle.classList.add('work-title');
   clientName.innerHTML = portfolioArray[2].company;
@@ -216,25 +248,20 @@ seeWork2Btn.addEventListener('click', () => {
   workImageDesktop.classList.add('works-image', 'desktop-work-img');
   projectDescription.innerHTML = portfolioArray[2].description;
   projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[0][0];
+  htmlBtn.innerHTML = portfolioArray[2].htmlSkill;
   htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[0][2];
+  cssBtn.innerHTML = portfolioArray[2].cssSkill;
   cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[0][3];
+  javascriptBtn.innerHTML = portfolioArray[2].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
-  seeLive.innerHTML = portfolioArray[1].buttons[0];
-  seeLive.classList.add('see-project-btn');
-  seeSource.innerHTML = portfolioArray[1].buttons[1];
-  seeSource.classList.add('see-project-btn');
 });
 
-//---------------------------Work 2 ----------------------------------------
-const seeWork3Btn = document.querySelector('.seeWork3Btn');
-seeWork3Btn.addEventListener('click', () => {
+// ---------------------------Work 4 ----------------------------------------
+const seeWork4Btn = document.querySelector('.seeWork4Btn');
+seeWork4Btn.addEventListener('click', () => {
   scrollUp();
-  console.log('Work 3 button clicked');
   popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
+  popupWindow.classList.add('overlay', 'overlayWhite');
   workTitle.innerHTML = portfolioArray[3].projectName;
   workTitle.classList.add('work-title');
   clientName.innerHTML = portfolioArray[3].company;
@@ -249,53 +276,17 @@ seeWork3Btn.addEventListener('click', () => {
   workImageDesktop.classList.add('works-image', 'desktop-work-img');
   projectDescription.innerHTML = portfolioArray[3].description;
   projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[0][0];
+  htmlBtn.innerHTML = portfolioArray[3].htmlSkill;
   htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[0][2];
+  cssBtn.innerHTML = portfolioArray[3].cssSkill;
   cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[0][3];
+  javascriptBtn.innerHTML = portfolioArray[3].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
-  seeLive.innerHTML = portfolioArray[1].buttons[0];
-  seeLive.classList.add('see-project-btn');
-  seeSource.innerHTML = portfolioArray[1].buttons[1];
-  seeSource.classList.add('see-project-btn');
 });
 
-//---------------------------Work 2 ----------------------------------------
-const seeWork4Btn = document.querySelector('.seeWork4Btn');
-seeWork4Btn.addEventListener('click', () => {
-  scrollUp();
-  console.log('Work 2 button clicked');
-  popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
-  workTitle.innerHTML = portfolioArray[4].projectName;
-  workTitle.classList.add('work-title');
-  clientName.innerHTML = portfolioArray[4].company;
-  clientName.classList.add('work-client', 'h3-common-styles');
-  roleOccupied.innerHTML = portfolioArray[4].role;
-  roleOccupied.classList.add('work-role', 'h3-common-styles');
-  projectYear.innerHTML = portfolioArray[4].year;
-  projectYear.classList.add('work-year', 'h3-common-styles');
-  work1ImageMobile.setAttribute('src', portfolioArray[4].portfolioImageMobile);
-  work1ImageMobile.classList.add('works-image', 'mobile-work-img');
-  workImageDesktop.setAttribute('src', portfolioArray[4].portfolioImageDesktop);
-  workImageDesktop.classList.add('works-image', 'desktop-work-img');
-  projectDescription.innerHTML = portfolioArray[4].description;
-  projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[0][0];
-  htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[0][2];
-  cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[0][3];
-  javascriptBtn.classList.add('works-btn');
-  seeLive.innerHTML = portfolioArray[1].buttons[0];
-  seeLive.classList.add('see-project-btn');
-  seeSource.innerHTML = portfolioArray[1].buttons[1];
-  seeSource.classList.add('see-project-btn');
-});
-
-//-----------------------------------------close popup--------------------
-closeBtn.addEventListener('click', function () {
+// -----------------------------------------close popup--------------------
+closeBtn.addEventListener('click', () => {
   popupWindow.classList.add('hide');
-  popupWindow.classList.remove('overlay');
+  popupWindow.classList.remove('overlay', 'overlayWhite');
 });
+
