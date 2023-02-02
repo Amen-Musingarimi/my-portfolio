@@ -95,6 +95,167 @@ const portfolioArray = [
   },
 ];
 
+// ------------------------------Dynamic Work buld------------------------------
+const work1 = document.querySelector('.grid-item-1');
+work1.innerHTML = `
+<div class="card-container">
+            <img
+              src="images/desktop-work1.png"
+              alt="My firts portfolio work"
+              class="works-image"
+            />
+            <div class="works-details">
+              <h2 class="work-title">Tonic</h2>
+              <ul>
+                <li><h3 class="work-client h3-common-styles">CANOPY</h3></li>
+                <li><img src="images/dot.png" alt="Canopy icon image" /></li>
+                <li>
+                  <h3 class="work-role h3-common-styles">Back End Dev</h3>
+                </li>
+                <li><img src="images/dot.png" alt="Backend icon image" /></li>
+                <li><h3 class="work-year h3-common-styles">2015</h3></li>
+              </ul>
+              <p class="work-description">
+                A daily selection of privately personalized reads; no accounts
+                or sign-ups required.
+              </p>
+              <ul class="works-btns">
+                <li><button type="button" class="works-btn">html</button></li>
+                <li><button type="button" class="works-btn">css</button></li>
+                <li>
+                  <button type="button" class="works-btn">javascript</button>
+                </li>
+              </ul>
+              <button class="see-project-btn seeWork1Btn" type="button">
+                See Project
+              </button>
+            </div>
+          </div>
+`;
+
+// work 2-----
+const work2 = document.querySelector('.grid-item2');
+work2.innerHTML = `
+<div class="card-container">
+            <img
+              src="images/desktop-work2.png"
+              alt="My firts portfolio work"
+              class="works-image reorder-img"
+            />
+            <div class="works-details">
+              <h2 class="work-title">
+                Multi-Post <br class="line-break" />Stories
+              </h2>
+              <ul>
+                <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
+                <li><img src="images/dot.png" alt="Facebook icon image" /></li>
+                <li>
+                  <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
+                </li>
+                <li>
+                  <img src="images/dot.png" alt="Full-Stack icon image" />
+                </li>
+                <li><h3 class="work-year h3-common-styles">2015</h3></li>
+              </ul>
+              <p class="work-description">
+                A daily selection of privately personalized reads; no accounts
+                or sign-ups required.
+              </p>
+              <ul class="works-btns">
+                <li><button type="button" class="works-btn">html</button></li>
+                <li><button type="button" class="works-btn">css</button></li>
+                <li>
+                  <button type="button" class="works-btn">javascript</button>
+                </li>
+              </ul>
+              <button class="see-project-btn seeWork2Btn" type="button">
+                See Project
+              </button>
+            </div>
+          </div>
+`;
+
+// Work 3
+const work3 = document.querySelector('.grid-item3');
+work3.innerHTML = `
+<div class="card-container">
+            <img
+              src="images/desktop-work3.png"
+              alt="My firts portfolio work"
+              class="works-image"
+            />
+            <div class="works-details">
+              <h2 class="work-title">Facebook 360</h2>
+              <ul>
+                <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
+                <li>
+                  <img src="images/dot.png" alt="Facebook 360 icon image" />
+                </li>
+                <li>
+                  <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
+                </li>
+                <li>
+                  <img src="images/dot.png" alt="Full Stack icon image" />
+                </li>
+                <li><h3 class="work-year h3-common-styles">2015</h3></li>
+              </ul>
+              <p class="work-description">
+                A daily selection of privately personalized reads; no accounts
+                or sign-ups required.
+              </p>
+              <ul class="works-btns">
+                <li><button type="button" class="works-btn">html</button></li>
+                <li><button type="button" class="works-btn">css</button></li>
+                <li>
+                  <button type="button" class="works-btn">javascript</button>
+                </li>
+              </ul>
+              <button class="see-project-btn seeWork3Btn" type="button">
+                See Project
+              </button>
+            </div>
+          </div>
+`;
+
+// Work4--
+const work4 = document.querySelector('.grid-item4');
+work4.innerHTML = `
+<div class="card-container">
+            <img
+              src="images/desktop-work4.png"
+              alt="My firts portfolio work"
+              class="works-image reorder-img"
+            />
+            <div class="works-details">
+              <h2 class="work-title">Uber Navigation</h2>
+              <ul>
+                <li><h3 class="work-client h3-common-styles">UBER</h3></li>
+                <li><img src="images/dot.png" alt="Uber icon image" /></li>
+                <li>
+                  <h3 class="work-role h3-common-styles">Lead Developer</h3>
+                </li>
+                <li><img src="images/dot.png" alt="Leed Dev icon image" /></li>
+                <li><h3 class="work-year h3-common-styles">2018</h3></li>
+              </ul>
+              <p class="work-description">
+                A daily selection of privately personalized reads; no accounts
+                or sign-ups required.
+              </p>
+              <ul class="works-btns">
+                <li><button type="button" class="works-btn">html</button></li>
+                <li><button type="button" class="works-btn">css</button></li>
+                <li>
+                  <button type="button" class="works-btn">javascript</button>
+                </li>
+              </ul>
+              <button class="see-project-btn seeWork4Btn" type="button">
+                See Project
+              </button>
+            </div>
+            <section class="popupWindow hide"></section>
+          </div>
+`;
+
 const popupWindow = document.querySelector('.popupWindow');
 const popupContainer = document.createElement('div');
 popupContainer.classList.add('pop');
