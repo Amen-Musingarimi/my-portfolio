@@ -94,8 +94,16 @@ p:hover {
   top: 0;
   left: 0;
   padding: 0 28px;
-  background-color: #6070ff;
   opacity: 0.9;
+}
+
+.overlayWhite {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.mobileBlueOverlay {
+  background-color: #6070ff;
 }
 
 .blurry-text {
@@ -237,7 +245,7 @@ section ul .linked-in,
 }
 
 .works-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .desktop-work-img {
@@ -329,6 +337,59 @@ section ul .linked-in,
 .see-project-btn:active {
   color: #fff;
   background-color: #1d1d9e;
+}
+
+/* -- -------------------------------Styling The Popup Window---------------------------------- -- */
+.hide {
+  display: none;
+}
+
+.popupCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.marginBottom {
+  margin-bottom: 16px;
+}
+
+.paddingBottom {
+  padding-bottom: 12px;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.closeBtn {
+  font-size: 26px;
+  color: #67798e;
+}
+
+.roleDetail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.skillsBtns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.previewBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #ebecf0;
+  padding-top: 30px;
 }
 
 /* -- -------------------------------Styling The About Myself Section---------------------------------- -- */
@@ -640,6 +701,33 @@ section ul .linked-in,
     background: var(--color-white);
   }
 
+  /* -- -------------------Styling the Popup Window--------------------- -- */
+  .overlay {
+    width: 100vw;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    background-color: rgba(193, 199, 208, 0.884);
+  }
+
+  .pop {
+    background-color: #fff;
+    margin: 77px 142px 337px 142px;
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+
+  .previewBtns {
+    justify-content: space-between;
+  }
+
   /* -- -------------------Styling the About Myself Page--------------------- -- */
   .about-myself-card {
     display: grid;
@@ -650,6 +738,10 @@ section ul .linked-in,
 
   .about-myself-details {
     padding-left: 0;
+  }
+
+  .projectHeader {
+    padding-top: 0;
   }
 
   .about-myself-heading {
