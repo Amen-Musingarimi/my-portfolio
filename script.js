@@ -39,7 +39,8 @@ for (let i = 0; i < navLinks.length; i += 1) {
 }
 
 // -----------------------------Popup window------------------------------------------------
-const descriptionText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
+const descriptionText =
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
 const portfolioArray = [
   {
     projectName: 'Tonic',
@@ -283,3 +284,31 @@ function validateForm(e) {
 
 const { contactForm } = document.forms;
 contactForm.addEventListener('submit', validateForm);
+
+//Local Storage
+const userName = document.querySelector('#name');
+const message = document.querySelector('#message');
+
+const savedUser = {};
+
+const save = () => {
+  savedUser.name = userName.value;
+  savedUser.email = email.value;
+
+  localStorage.setItem('savedUser', JSON.stringify(savedUser));
+};
+
+const retrive = () => {
+  const retrivedUser = JSON.parse(localStorage.getItem('savedUser'));
+
+  userName.value = retrivedUser.name;
+  email.value = retrivedUser.email;
+};
+
+contactForm.addEventListener('submit', function () {
+  save();
+});
+
+window.addEventListener('load', function () {
+  retrive();
+});
