@@ -551,6 +551,16 @@ section ul .linked-in,
   transition: var(--transition);
 }
 
+/* -----------------------------Contact Form Validation-------------------- */
+.errorMessage {
+  color: #f00;
+  margin-bottom: 12px;
+}
+
+.emailError {
+  border: #e09a9a;
+}
+
 /* -- -------------------------------Media Quries Desktop Version---------------------------------- -- */
 
 @media all and (min-width: 1024px) {

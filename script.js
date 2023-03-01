@@ -422,3 +422,45 @@ closeBtn.addEventListener('click', () => {
   popupWindow.classList.add('hide');
   popupWindow.classList.remove('overlay');
 });
+
+// Contact Form Validation-------------------------------------------------------------
+const email = document.querySelector('.email');
+
+function validateForm(e) {
+  if (email.value !== email.value.toLowerCase()) {
+    document.querySelector('.errorMessage').classList.remove('hide');
+    e.preventDefault();
+    e.stopPropagation();
+  }
+}
+
+const { contactForm } = document.forms;
+contactForm.addEventListener('submit', validateForm);
+
+//Local Storage
+const userName = document.querySelector('#name');
+const message = document.querySelector('#message');
+
+const savedUser = {};
+
+const save = () => {
+  savedUser.name = userName.value;
+  savedUser.email = email.value;
+
+  localStorage.setItem('savedUser', JSON.stringify(savedUser));
+};
+
+const retrive = () => {
+  const retrivedUser = JSON.parse(localStorage.getItem('savedUser'));
+
+  userName.value = retrivedUser.name;
+  email.value = retrivedUser.email;
+};
+
+contactForm.addEventListener('submit', function () {
+  save();
+});
+
+window.addEventListener('load', function () {
+  retrive();
+});
