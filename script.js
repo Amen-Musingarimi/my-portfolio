@@ -43,16 +43,19 @@ const descriptionText = "Lorem Ipsum is simply dummy text of the printing and ty
 
 const portfolioArray = [
   {
-    projectName: 'Tonic',
-    company: 'CANOPY',
-    role: 'Back End Dev',
-    year: 2015,
-    portfolioImageDesktop: 'images/desktop-work11.png',
-    description: descriptionText,
+    projectName: 'Music Concert',
+    company: 'Microverse',
+    role: 'Front End Dev',
+    year: 2023,
+    portfolioImageDesktop: 'images/desktop-work1.png',
+    description:
+      'Musical Concert is a website where users can see details about a popular music concert hosted in Victoria Falls, Zimbabwe. This was built with Html, CSS and JavaSript',
     htmlSkill: 'html',
     cssSkill: 'css',
     javascriptSkill: 'javascript',
-    buttons: [],
+    gitHubLink: 'https://github.com/Amen-Musingarimi/musical-concert-capstone',
+    liveDemoLink:
+      'https://amen-musingarimi.github.io/musical-concert-capstone/',
   },
 
   {
@@ -100,24 +103,23 @@ const work1 = document.querySelector('.grid-item-1');
 work1.innerHTML = `
 <div class="card-container">
             <img
-              src="images/desktop-work1.png"
+              src=${portfolioArray[0].portfolioImageDesktop}
               alt="My firts portfolio work"
               class="works-image"
             />
             <div class="works-details">
-              <h2 class="work-title">Tonic</h2>
+              <h2 class="work-title">${portfolioArray[0].projectName}</h2>
               <ul>
-                <li><h3 class="work-client h3-common-styles">CANOPY</h3></li>
+                <li><h3 class="work-client h3-common-styles">${portfolioArray[0].company}</h3></li>
                 <li><img src="images/dot.png" alt="Canopy icon image" /></li>
                 <li>
-                  <h3 class="work-role h3-common-styles">Back End Dev</h3>
+                  <h3 class="work-role h3-common-styles">${portfolioArray[0].role}</h3>
                 </li>
                 <li><img src="images/dot.png" alt="Backend icon image" /></li>
-                <li><h3 class="work-year h3-common-styles">2015</h3></li>
+                <li><h3 class="work-year h3-common-styles">${portfolioArray[0].year}</h3></li>
               </ul>
               <p class="work-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
+                ${portfolioArray[0].description}
               </p>
               <ul class="works-btns">
                 <li><button type="button" class="works-btn">html</button></li>
@@ -287,10 +289,10 @@ class="workImageDesktop"
       <button class="javascriptBtn" type="button"></button>
     </div>
     <div class="buttons previewBtns">
-      <button class="see-project-btn dynamicBTns" type="button">   See Live
-      <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-      <button class="see-project-btn dynamicBTns" type="button"> See Source
-      <i class="fa-brands fa-github"></i></button>
+      <a class="see-project-btn dynamicBTns seeLive" href="" target="blank">   See Live
+      <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a class="see-project-btn dynamicBTns seeSource" href="" target="blank"> See Source
+      <i class="fa-brands fa-github"></i></a>
     </div>
   </div>
 </div>
@@ -312,6 +314,8 @@ const htmlBtn = document.querySelector('.htmlBtn');
 const cssBtn = document.querySelector('.cssBtn');
 const javascriptBtn = document.querySelector('.javascriptBtn');
 const closeBtn = document.querySelector('.closeBtn');
+const seeLiveBtn = document.querySelector('.seeLive');
+const seeSourceBtn = document.querySelector('.seeSource');
 
 // ---------------------------Work 1 ----------------------------------------
 const seeWork1Btn = document.querySelector('.seeWork1Btn');
@@ -337,6 +341,8 @@ seeWork1Btn.addEventListener('click', () => {
   cssBtn.classList.add('works-btn');
   javascriptBtn.innerHTML = portfolioArray[0].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
+  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
+  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
 });
 
 // ---------------------------Work 2 ----------------------------------------
@@ -363,6 +369,8 @@ seeWork2Btn.addEventListener('click', () => {
   cssBtn.classList.add('works-btn');
   javascriptBtn.innerHTML = portfolioArray[1].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
+  seeLiveBtn.setAttribute('href', portfolioArray[5].liveDemoLink);
+  seeSourceBtn.setAttribute('href', portfolioArray[5].gitHubLink);
 });
 
 // ---------------------------Work 3 ----------------------------------------
@@ -389,6 +397,8 @@ seeWork3Btn.addEventListener('click', () => {
   cssBtn.classList.add('works-btn');
   javascriptBtn.innerHTML = portfolioArray[2].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
+  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
+  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
 });
 
 // ---------------------------Work 4 ----------------------------------------
@@ -415,6 +425,8 @@ seeWork4Btn.addEventListener('click', () => {
   cssBtn.classList.add('works-btn');
   javascriptBtn.innerHTML = portfolioArray[3].javascriptSkill;
   javascriptBtn.classList.add('works-btn');
+  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
+  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
 });
 
 // -----------------------------------------close popup--------------------
@@ -437,9 +449,8 @@ function validateForm(e) {
 const { contactForm } = document.forms;
 contactForm.addEventListener('submit', validateForm);
 
-//Local Storage
+// Local Storage
 const userName = document.querySelector('#name');
-const message = document.querySelector('#message');
 
 const savedUser = {};
 
@@ -457,10 +468,10 @@ const retrive = () => {
   email.value = retrivedUser.email;
 };
 
-contactForm.addEventListener('submit', function () {
+contactForm.addEventListener('submit', () => {
   save();
 });
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
   retrive();
 });
