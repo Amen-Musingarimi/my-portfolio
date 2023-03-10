@@ -38,16 +38,14 @@ for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', closeOnClick);
 }
 
-// -----------------------------Popup window------------------------------------------------
-const descriptionText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
-
+// ------------------------------------------Work------------------------------------------------
 const portfolioArray = [
   {
     projectName: 'Music Concert',
     company: 'Microverse',
     role: 'Front End Dev',
     year: 2023,
-    portfolioImageDesktop: 'images/desktop-work1.png',
+    workImage: 'images/desktop-work1.png',
     description:
       'Musical Concert is a website where users can see details about a popular music concert hosted in Victoria Falls, Zimbabwe. This was built with Html, CSS and JavaSript',
     htmlSkill: 'html',
@@ -59,381 +57,183 @@ const portfolioArray = [
   },
 
   {
-    projectName: 'Multi-Post Stories',
-    company: 'FACEBOOK',
+    projectName: 'Leaderboard',
+    company: 'Microverse',
     role: 'Full Stack Dev',
-    year: 2015,
-    portfolioImageDesktop: 'images/desktop-work2.png',
-    description: descriptionText,
+    year: 2023,
+    workImage: 'images/leaderboard.png',
+    description:
+      'The leaderboard website displays scores submitted by different players. It also allows the user to submit his/her score. All data is preserved thanks to the external Leaderboard API service.',
     htmlSkill: 'html',
     cssSkill: 'css',
     javascriptSkill: 'javascript',
-    buttons: [],
+    webpackSlill: 'webpack',
+    gitHubLink: 'https://github.com/Amen-Musingarimi/leaderboard',
+    liveDemoLink: 'https://amen-musingarimi.github.io/leaderboard/dist/',
   },
 
   {
-    projectName: 'Facebook 360',
-    company: 'FACEBOOK',
+    projectName: 'To-Do App',
+    company: 'Microverse',
     role: 'Full Stack Dev',
-    year: 2015,
-    portfolioImageDesktop: 'images/desktop-work3.png',
-    description: descriptionText,
+    year: 2023,
+    workImage: 'images/todo.png',
+    description:
+      'This is a to-do application that allows users to set their goals and mark or delete them when they completed the goal. Built with Html, CSS, and Vanilla JavaScript.',
     htmlSkill: 'html',
     cssSkill: 'css',
     javascriptSkill: 'javascript',
-    buttons: [],
-  },
-
-  {
-    projectName: 'Uber Navigation',
-    company: 'Uber',
-    role: 'Lead Developer',
-    year: 2018,
-    portfolioImageDesktop: 'images/desktop-work4.png',
-    description: descriptionText,
-    htmlSkill: 'html',
-    cssSkill: 'css',
-    javascriptSkill: 'javascript',
-    buttons: [],
+    webpackSlill: 'webpack',
+    gitHubLink: 'https://github.com/Amen-Musingarimi/todo-app',
+    liveDemoLink: 'https://amen-musingarimi.github.io/todo-app/dist/',
   },
 ];
 
-// ------------------------------Dynamic Work buld------------------------------
-const work1 = document.querySelector('.grid-item-1');
-work1.innerHTML = `
-<div class="card-container">
-            <img
-              src=${portfolioArray[0].portfolioImageDesktop}
-              alt="My firts portfolio work"
-              class="works-image"
-            />
-            <div class="works-details">
-              <h2 class="work-title">${portfolioArray[0].projectName}</h2>
-              <ul>
-                <li><h3 class="work-client h3-common-styles">${portfolioArray[0].company}</h3></li>
-                <li><img src="images/dot.png" alt="Canopy icon image" /></li>
-                <li>
-                  <h3 class="work-role h3-common-styles">${portfolioArray[0].role}</h3>
-                </li>
-                <li><img src="images/dot.png" alt="Backend icon image" /></li>
-                <li><h3 class="work-year h3-common-styles">${portfolioArray[0].year}</h3></li>
-              </ul>
-              <p class="work-description">
-                ${portfolioArray[0].description}
-              </p>
-              <ul class="works-btns">
-                <li><button type="button" class="works-btn">html</button></li>
-                <li><button type="button" class="works-btn">css</button></li>
-                <li>
-                  <button type="button" class="works-btn">javascript</button>
-                </li>
-              </ul>
-              <button class="see-project-btn seeWork1Btn" type="button">
-                See Project
-              </button>
-            </div>
-          </div>
-`;
+// ------------------------------Dynamic rendering of works------------------------------
+const work = document.querySelector('.work');
 
-// work 2-----
-const work2 = document.querySelector('.grid-item2');
-work2.innerHTML = `
-<div class="card-container">
-            <img
-              src="images/desktop-work2.png"
-              alt="My firts portfolio work"
-              class="works-image reorder-img"
-            />
-            <div class="works-details">
-              <h2 class="work-title">
-                Multi-Post <br class="line-break" />Stories
-              </h2>
-              <ul>
-                <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
-                <li><img src="images/dot.png" alt="Facebook icon image" /></li>
-                <li>
-                  <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
-                </li>
-                <li>
-                  <img src="images/dot.png" alt="Full-Stack icon image" />
-                </li>
-                <li><h3 class="work-year h3-common-styles">2015</h3></li>
-              </ul>
-              <p class="work-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="works-btns">
-                <li><button type="button" class="works-btn">html</button></li>
-                <li><button type="button" class="works-btn">css</button></li>
-                <li>
-                  <button type="button" class="works-btn">javascript</button>
-                </li>
-              </ul>
-              <button class="see-project-btn seeWork2Btn" type="button">
-                See Project
-              </button>
-            </div>
-          </div>
-`;
+for (let i = 0; i < portfolioArray.length; i += 1) {
+  const id = i;
 
-// Work 3
-const work3 = document.querySelector('.grid-item3');
-work3.innerHTML = `
-<div class="card-container">
-            <img
-              src="images/desktop-work3.png"
-              alt="My firts portfolio work"
-              class="works-image"
-            />
-            <div class="works-details">
-              <h2 class="work-title">Facebook 360</h2>
-              <ul>
-                <li><h3 class="work-client h3-common-styles">FACEBOOK</h3></li>
-                <li>
-                  <img src="images/dot.png" alt="Facebook 360 icon image" />
-                </li>
-                <li>
-                  <h3 class="work-role h3-common-styles">Full Stack Dev</h3>
-                </li>
-                <li>
-                  <img src="images/dot.png" alt="Full Stack icon image" />
-                </li>
-                <li><h3 class="work-year h3-common-styles">2015</h3></li>
-              </ul>
-              <p class="work-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="works-btns">
-                <li><button type="button" class="works-btn">html</button></li>
-                <li><button type="button" class="works-btn">css</button></li>
-                <li>
-                  <button type="button" class="works-btn">javascript</button>
-                </li>
-              </ul>
-              <button class="see-project-btn seeWork3Btn" type="button">
-                See Project
-              </button>
-            </div>
-          </div>
-`;
-
-// Work4--
-const work4 = document.querySelector('.grid-item4');
-work4.innerHTML = `
-<div class="card-container">
-            <img
-              src="images/desktop-work4.png"
-              alt="My firts portfolio work"
-              class="works-image reorder-img"
-            />
-            <div class="works-details">
-              <h2 class="work-title">Uber Navigation</h2>
-              <ul>
-                <li><h3 class="work-client h3-common-styles">UBER</h3></li>
-                <li><img src="images/dot.png" alt="Uber icon image" /></li>
-                <li>
-                  <h3 class="work-role h3-common-styles">Lead Developer</h3>
-                </li>
-                <li><img src="images/dot.png" alt="Leed Dev icon image" /></li>
-                <li><h3 class="work-year h3-common-styles">2018</h3></li>
-              </ul>
-              <p class="work-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="works-btns">
-                <li><button type="button" class="works-btn">html</button></li>
-                <li><button type="button" class="works-btn">css</button></li>
-                <li>
-                  <button type="button" class="works-btn">javascript</button>
-                </li>
-              </ul>
-              <button class="see-project-btn seeWork4Btn" type="button">
-                See Project
-              </button>
-            </div>
-            <section class="popupWindow hide"></section>
-          </div>
-`;
-
-const popupWindow = document.querySelector('.popupWindow');
-const popupContainer = document.createElement('div');
-popupContainer.classList.add('pop');
-popupWindow.appendChild(popupContainer);
-popupContainer.innerHTML = `
-<div class="popupCard">
-<div class="projectHeader">
-  <h2 class="workTitle"></h2>
-  <a class="closeBtn" href="#"><i class="fa-solid fa-xmark"></i></a>
-</div>
-<div class="roleDetail marginBottom">
-  <h3 class="clientName"></h3>
-  <img src="images/dot.png" alt="Canopy icon image" />
-  <h3 class="roleOccupied"></h3>
-  <img src="images/dot.png" alt="Backend icon image" />
-  <h3 class="projectYear"></h3>
-</div>
-<img
-src=""
-alt="My firts portfolio work"
-class="workImageDesktop"
-/>
-<div class="projectDetails details">
-  <p class="projectDescription marginBottom"></p>
-  <div projectBtns>
-    <div  class="skillsBtns marginBottom paddingBottom">
-      <button class="htmlBtn" type="button"></button>
-      <button class="cssBtn" type="button"></button>
-      <button class="javascriptBtn" type="button"></button>
-    </div>
-    <div class="buttons previewBtns">
-      <a class="see-project-btn dynamicBTns seeLive" href="" target="blank">   See Live
-      <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      <a class="see-project-btn dynamicBTns seeSource" href="" target="blank"> See Source
-      <i class="fa-brands fa-github"></i></a>
-    </div>
-  </div>
-</div>
-</div>
-`;
-
-function scrollUp() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  const fetch = document.querySelector('.work').innerHTML;
+  work.innerHTML = `
+  <div class="grid-item" id=${id}>
+  <div class="card-container">
+             <img
+               src=${portfolioArray[i].workImage}
+               alt="My firts portfolio work"
+               class="works-image"
+             />
+             <div class="works-details">
+               <h2 class="work-title">${portfolioArray[i].projectName}</h2>
+               <ul>
+                 <li><h3 class="work-client h3-common-styles">${
+  portfolioArray[i].company
+}</h3></li>
+                 <li><img src="images/dot.png" alt="Canopy icon image" /></li>
+                 <li>
+                   <h3 class="work-role h3-common-styles">${
+  portfolioArray[i].role
+}</h3>
+                 </li>
+                 <li><img src="images/dot.png" alt="Backend icon image" /></li>
+                 <li><h3 class="work-year h3-common-styles">${
+  portfolioArray[i].year
+}</h3></li>
+               </ul>
+               <p class="work-description">
+                 ${portfolioArray[i].description}
+               </p>
+               <ul class="works-btns">
+                 <li><button type="button" class="works-btn">${
+  portfolioArray[i].htmlSkill
+}</button></li>
+                 <li><button type="button" class="works-btn">${
+  portfolioArray[i].cssSkill
+}</button></li>
+                 <li>
+                   <button type="button" class="works-btn">${
+  portfolioArray[i].javascriptSkill
+}</button>
+                 </li>
+               </ul>
+               <button id=${portfolioArray.indexOf(
+    i,
+  )} class="see-project-btn seeWork1Btn" type="button">
+                 See Project
+               </button>
+             </div>
+           </div>
+           </div> ${fetch}
+  `;
 }
 
-const workTitle = document.querySelector('.workTitle');
-const clientName = document.querySelector('.clientName');
-const roleOccupied = document.querySelector('.roleOccupied');
-const projectYear = document.querySelector('.projectYear');
-const workImageDesktop = document.querySelector('.workImageDesktop');
-const projectDescription = document.querySelector('.projectDescription');
-const htmlBtn = document.querySelector('.htmlBtn');
-const cssBtn = document.querySelector('.cssBtn');
-const javascriptBtn = document.querySelector('.javascriptBtn');
-const closeBtn = document.querySelector('.closeBtn');
-const seeLiveBtn = document.querySelector('.seeLive');
-const seeSourceBtn = document.querySelector('.seeSource');
+const scrollUp = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
 
-// ---------------------------Work 1 ----------------------------------------
-const seeWork1Btn = document.querySelector('.seeWork1Btn');
-seeWork1Btn.addEventListener('click', () => {
-  scrollUp();
-  popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay', 'heightAdjust');
-  workTitle.innerHTML = portfolioArray[0].projectName;
-  workTitle.classList.add('work-title');
-  clientName.innerHTML = portfolioArray[0].company;
-  clientName.classList.add('work-client', 'h3-common-styles');
-  roleOccupied.innerHTML = portfolioArray[0].role;
-  roleOccupied.classList.add('work-role', 'h3-common-styles');
-  projectYear.innerHTML = portfolioArray[0].year;
-  projectYear.classList.add('work-year', 'h3-common-styles');
-  workImageDesktop.setAttribute('src', portfolioArray[0].portfolioImageDesktop);
-  workImageDesktop.classList.add('works-image', 'desktop-work-img');
-  projectDescription.innerHTML = portfolioArray[0].description;
-  projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[0].htmlSkill;
-  htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[0].cssSkill;
-  cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[0].javascriptSkill;
-  javascriptBtn.classList.add('works-btn');
-  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
-  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
-});
+const seeProjectBtns = document.querySelectorAll('.see-project-btn');
+const popupWindow = document.querySelector('.popupWindow');
 
-// ---------------------------Work 2 ----------------------------------------
-const seeWork2Btn = document.querySelector('.seeWork2Btn');
-seeWork2Btn.addEventListener('click', () => {
-  scrollUp();
-  popupWindow.classList.remove('hide', 'heightAdjust');
-  popupWindow.classList.add('overlay');
-  workTitle.innerHTML = portfolioArray[1].projectName;
-  workTitle.classList.add('work-title');
-  clientName.innerHTML = portfolioArray[1].company;
-  clientName.classList.add('work-client', 'h3-common-styles');
-  roleOccupied.innerHTML = portfolioArray[1].role;
-  roleOccupied.classList.add('work-role', 'h3-common-styles');
-  projectYear.innerHTML = portfolioArray[1].year;
-  projectYear.classList.add('work-year', 'h3-common-styles');
-  workImageDesktop.setAttribute('src', portfolioArray[1].portfolioImageDesktop);
-  workImageDesktop.classList.add('works-image', 'desktop-work-img');
-  projectDescription.innerHTML = portfolioArray[1].description;
-  projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[1].htmlSkill;
-  htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[1].cssSkill;
-  cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[1].javascriptSkill;
-  javascriptBtn.classList.add('works-btn');
-  seeLiveBtn.setAttribute('href', portfolioArray[5].liveDemoLink);
-  seeSourceBtn.setAttribute('href', portfolioArray[5].gitHubLink);
-});
+seeProjectBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    scrollUp();
+    popupWindow.classList.remove('hide');
+    popupWindow.classList.add('overlay');
+    const popupContainer = document.createElement('div');
+    popupContainer.classList.add('pop');
+    popupWindow.appendChild(popupContainer);
 
-// ---------------------------Work 3 ----------------------------------------
-const seeWork3Btn = document.querySelector('.seeWork3Btn');
-seeWork3Btn.addEventListener('click', () => {
-  scrollUp();
-  popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
-  workTitle.innerHTML = portfolioArray[2].projectName;
-  workTitle.classList.add('work-title');
-  clientName.innerHTML = portfolioArray[2].company;
-  clientName.classList.add('work-client', 'h3-common-styles');
-  roleOccupied.innerHTML = portfolioArray[2].role;
-  roleOccupied.classList.add('work-role', 'h3-common-styles');
-  projectYear.innerHTML = portfolioArray[2].year;
-  projectYear.classList.add('work-year', 'h3-common-styles');
-  workImageDesktop.setAttribute('src', portfolioArray[2].portfolioImageDesktop);
-  workImageDesktop.classList.add('works-image', 'desktop-work-img');
-  projectDescription.innerHTML = portfolioArray[2].description;
-  projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[2].htmlSkill;
-  htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[2].cssSkill;
-  cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[2].javascriptSkill;
-  javascriptBtn.classList.add('works-btn');
-  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
-  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
-});
+    const index = e.target.parentNode.parentNode.parentNode.getAttribute('id');
 
-// ---------------------------Work 4 ----------------------------------------
-const seeWork4Btn = document.querySelector('.seeWork4Btn');
-seeWork4Btn.addEventListener('click', () => {
-  scrollUp();
-  popupWindow.classList.remove('hide');
-  popupWindow.classList.add('overlay');
-  workTitle.innerHTML = portfolioArray[3].projectName;
-  workTitle.classList.add('work-title');
-  clientName.innerHTML = portfolioArray[3].company;
-  clientName.classList.add('work-client', 'h3-common-styles');
-  roleOccupied.innerHTML = portfolioArray[3].role;
-  roleOccupied.classList.add('work-role', 'h3-common-styles');
-  projectYear.innerHTML = portfolioArray[3].year;
-  projectYear.classList.add('work-year', 'h3-common-styles');
-  workImageDesktop.setAttribute('src', portfolioArray[3].portfolioImageDesktop);
-  workImageDesktop.classList.add('works-image', 'desktop-work-img');
-  projectDescription.innerHTML = portfolioArray[3].description;
-  projectDescription.classList.add('work-description');
-  htmlBtn.innerHTML = portfolioArray[3].htmlSkill;
-  htmlBtn.classList.add('works-btn');
-  cssBtn.innerHTML = portfolioArray[3].cssSkill;
-  cssBtn.classList.add('works-btn');
-  javascriptBtn.innerHTML = portfolioArray[3].javascriptSkill;
-  javascriptBtn.classList.add('works-btn');
-  seeLiveBtn.setAttribute('href', portfolioArray[0].liveDemoLink);
-  seeSourceBtn.setAttribute('href', portfolioArray[0].gitHubLink);
+    popupContainer.innerHTML = `
+      <div class="popupCard">
+        <div class="projectHeader">
+          <h2 class="work-title">${portfolioArray[index].projectName}</h2>
+          <a class="closeBtn" href="#"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="roleDetail marginBottom">
+          <h3 class="work-client h3-common-styles">${portfolioArray[index].company}</h3>
+          <img src="images/dot.png" alt="Canopy icon image" />
+          <h3 class="work-role h3-common-styles">${portfolioArray[index].role}</h3>
+          <img src="images/dot.png" alt="Backend icon image" />
+          <h3 class="work-year h3-common-styles">${portfolioArray[index].year}</h3>
+        </div>
+        <img src="${portfolioArray[index].workImage}"
+             alt="My firts portfolio work"
+             class="workImageDesktop"/>
+        <div class="projectDetails details">
+          <p class="work-description marginBottom">${portfolioArray[index].description}</p>
+          <div projectBtns>
+            <div  class="skillsBtns marginBottom paddingBottom">
+              <button class="htmlBtn works-btn" type="button">${portfolioArray[index].htmlSkill}</button>
+              <button class="cssBtn works-btn" type="button">${portfolioArray[index].cssSkill}</button>
+              <button class="javascriptBtn works-btn" type="button">${portfolioArray[index].javascriptSkill}</button>
+            </div>
+            <div class="buttons previewBtns">
+      <a class="see-project-btn dynamicBTns seeLive" href="${portfolioArray[index].liveDemoLink}" target="blank">   See Live
+      <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a class="see-project-btn dynamicBTns seeSource" href="${portfolioArray[index].gitHubLink}" target="blank"> See Source
+      <i class="fa-brands fa-github"></i></a>
+    </div>
+            `;
+
+    // Add event listener for the close button
+    const closeBtn = popupContainer.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', () => {
+      popupWindow.classList.add('hide');
+      popupWindow.classList.remove('overlay');
+      popupContainer.remove();
+    });
+
+    // add event listener to overlay element to close popup
+    const overlay = popupWindow.querySelector('.overlay');
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        popupWindow.classList.add('hide');
+        popupWindow.classList.remove('overlay');
+        popupContainer.remove();
+      }
+    });
+
+    // prevent propagation of click event on popupContainer
+    popupContainer.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
 });
 
 // -----------------------------------------close popup--------------------
-closeBtn.addEventListener('click', () => {
-  popupWindow.classList.add('hide');
-  popupWindow.classList.remove('overlay');
-});
+const closeBtns = document.querySelectorAll('.closeBtn');
+
+for (let i = 0; i < closeBtns.length; i += 1) {
+  closeBtns[i].addEventListener('click', () => {
+    popupWindow.classList.remove('overlay');
+    popupWindow.classList.add('hide');
+    popupWindow.removeChild(popupWindow.firstChild);
+  });
+}
 
 // Contact Form Validation-------------------------------------------------------------
 const email = document.querySelector('.email');

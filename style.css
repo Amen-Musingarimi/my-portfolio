@@ -29,10 +29,12 @@ html {
 }
 
 body {
+  position: relative;
+  overflow: auto;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
   background: #f0f0f0;
   line-height: 1.7;
-  position: relative;
 }
 
 p {
@@ -205,19 +207,16 @@ section ul .linked-in,
 }
 
 /* -- -------------------------------Styling the Works Section---------------------------------- -- */
-.work-section {
+.work {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto;
   gap: 88px;
-}
-
-.grid-item-1 {
-  margin-top: 114px;
 }
 
 .grid-item {
   background-color: var(--color-white);
   margin: 0 24px;
+  border: 1px solid var(--color-light-dark);
   border: 1px solid #e0e0e0;
   border-radius: 16px;
 }
@@ -337,6 +336,7 @@ section ul .linked-in,
   max-width: 713px;
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
   background-color: rgba(193, 199, 208, 0.884);
 }
@@ -521,22 +521,24 @@ section ul .linked-in,
   padding: 12px;
 }
 
-.contact-form li input {
+input,
+textarea {
   width: 100%;
-  height: 48px;
-  margin-bottom: 12px;
   padding: 12px;
   border: none;
   border-radius: 8px;
+  outline-style: none;
+  box-shadow: none;
+}
+
+.contact-form li input {
+  height: 48px;
+  margin-bottom: 12px;
 }
 
 .contact-form li textarea {
-  width: 100%;
   height: 170px;
   margin-bottom: 4px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
 }
 
 .contact-btn-hover:hover {
@@ -829,7 +831,7 @@ section ul .linked-in,
 
   .contact-form li input,
   .contact-form li textarea {
-    border-radius: 0;
+    border-radius: 8px;
     margin-bottom: 27px;
     min-width: 447px;
   }
