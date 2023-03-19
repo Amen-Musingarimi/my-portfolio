@@ -41,22 +41,6 @@ for (let i = 0; i < navLinks.length; i += 1) {
 // ------------------------------------------Work------------------------------------------------
 const portfolioArray = [
   {
-    projectName: 'Music Concert',
-    company: 'Microverse',
-    role: 'Front End Dev',
-    year: 2023,
-    workImage: 'images/desktop-work1.png',
-    description:
-      'Musical Concert is a website where users can see details about a popular music concert hosted in Victoria Falls, Zimbabwe. This was built with Html, CSS and JavaSript',
-    htmlSkill: 'html',
-    cssSkill: 'css',
-    javascriptSkill: 'javascript',
-    gitHubLink: 'https://github.com/Amen-Musingarimi/musical-concert-capstone',
-    liveDemoLink:
-      'https://amen-musingarimi.github.io/musical-concert-capstone/',
-  },
-
-  {
     projectName: 'Leaderboard',
     company: 'Microverse',
     role: 'Full Stack Dev',
@@ -87,6 +71,37 @@ const portfolioArray = [
     gitHubLink: 'https://github.com/Amen-Musingarimi/todo-app',
     liveDemoLink: 'https://amen-musingarimi.github.io/todo-app/dist/',
   },
+
+  {
+    projectName: 'Music Concert',
+    company: 'Microverse',
+    role: 'Front End Dev',
+    year: 2023,
+    workImage: 'images/desktop-work1.png',
+    description:
+      'Musical Concert is a website where users can see details about a popular music concert hosted in Victoria Falls, Zimbabwe. This was built with Html, CSS and JavaSript',
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    gitHubLink: 'https://github.com/Amen-Musingarimi/musical-concert-capstone',
+    liveDemoLink:
+      'https://amen-musingarimi.github.io/musical-concert-capstone/',
+  },
+
+  {
+    projectName: 'LetsCook',
+    company: 'Microverse',
+    role: 'Front End Dev',
+    year: 2023,
+    workImage: 'images/foodApp.png',
+    description:
+      'The LetsCook website displays meals that are called from an API. It also allows the user to like the menu that he/she likes and also comment on it. All data is preserved thanks to the external Meals DB and the Involvement API services.',
+    htmlSkill: 'html',
+    cssSkill: 'css',
+    javascriptSkill: 'javascript',
+    gitHubLink: 'https://github.com/Amen-Musingarimi/JavascriptCapstone',
+    liveDemoLink: 'https://amen-musingarimi.github.io/JavascriptCapstone/dist/',
+  },
 ];
 
 // ------------------------------Dynamic rendering of works------------------------------
@@ -108,38 +123,38 @@ for (let i = 0; i < portfolioArray.length; i += 1) {
                <h2 class="work-title">${portfolioArray[i].projectName}</h2>
                <ul>
                  <li><h3 class="work-client h3-common-styles">${
-  portfolioArray[i].company
-}</h3></li>
+                   portfolioArray[i].company
+                 }</h3></li>
                  <li><img src="images/dot.png" alt="Canopy icon image" /></li>
                  <li>
                    <h3 class="work-role h3-common-styles">${
-  portfolioArray[i].role
-}</h3>
+                     portfolioArray[i].role
+                   }</h3>
                  </li>
                  <li><img src="images/dot.png" alt="Backend icon image" /></li>
                  <li><h3 class="work-year h3-common-styles">${
-  portfolioArray[i].year
-}</h3></li>
+                   portfolioArray[i].year
+                 }</h3></li>
                </ul>
                <p class="work-description">
                  ${portfolioArray[i].description}
                </p>
                <ul class="works-btns">
                  <li><button type="button" class="works-btn">${
-  portfolioArray[i].htmlSkill
-}</button></li>
+                   portfolioArray[i].htmlSkill
+                 }</button></li>
                  <li><button type="button" class="works-btn">${
-  portfolioArray[i].cssSkill
-}</button></li>
+                   portfolioArray[i].cssSkill
+                 }</button></li>
                  <li>
                    <button type="button" class="works-btn">${
-  portfolioArray[i].javascriptSkill
-}</button>
+                     portfolioArray[i].javascriptSkill
+                   }</button>
                  </li>
                </ul>
                <button id=${portfolioArray.indexOf(
-    i,
-  )} class="see-project-btn seeWork1Btn" type="button">
+                 i
+               )} class="see-project-btn seeWork1Btn" type="button">
                  See Project
                </button>
              </div>
