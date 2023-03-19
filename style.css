@@ -15,6 +15,10 @@ a:active {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   --color-white: #fff;
   --color-light: #7f8cff;
@@ -57,6 +61,9 @@ p:hover {
   background: var(--color-white);
   font-weight: 700;
   font-size: 18px;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .flex-item-1 {
@@ -94,15 +101,9 @@ p:hover {
   top: 0;
   left: 0;
   padding: 0 28px;
-  opacity: 0.9;
-  background-color: #6070ff;
+  background-color: var(--color-white);
   width: 100vw;
   min-height: 162vh;
-}
-
-.blurry-text {
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0, 0, 0);
 }
 
 .mobileMenu {
@@ -116,9 +117,9 @@ p:hover {
 }
 
 .mobileMenu > ul > li > a {
-  color: #fff;
-  font-weight: 400px;
-  font-size: 30px;
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .menuList {
@@ -126,7 +127,7 @@ p:hover {
 }
 
 .closeModal {
-  color: #fff;
+  color: var(--color-dark);
   font-size: 24px;
   margin-top: 30px;
 }
@@ -137,7 +138,8 @@ p:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 114px;
+  gap: 40px;
+  padding-top: 18%;
 }
 
 .main-page {
@@ -159,7 +161,7 @@ h1 {
 h1,
 .about-myself-heading {
   font-size: 40px;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 52px;
   color: var(--color-dark);
 }
@@ -173,7 +175,7 @@ h1,
 .social-links-heading {
   color: #142cff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
 }
 
@@ -210,7 +212,7 @@ section ul .linked-in,
 .work {
   display: grid;
   grid-template-rows: auto auto auto;
-  gap: 88px;
+  gap: 50px;
 }
 
 .grid-item {
@@ -563,10 +565,15 @@ textarea {
   border: #e09a9a;
 }
 
-/* -- -------------------------------Media Quries Desktop Version---------------------------------- -- */
+/* ///////////////////////////////////////////Media Quries Desktop Version/////////////////////////////////////////// */
 
 @media all and (min-width: 1024px) {
   /* -- ------------------The Nav Bar-------------------- */
+  .main-container {
+    gap: 80px;
+    padding-top: 6.5%;
+  }
+
   .parent-container {
     align-items: center;
   }
@@ -585,11 +592,12 @@ textarea {
 
   .logo {
     padding: 0;
+    font-size: 26px;
   }
 
   .mobileMenu > ul > li > a {
-    color: #000;
-    font-size: 15px;
+    color: var(--color-dark);
+    font-size: 18px;
   }
 
   .hidden {
@@ -616,7 +624,7 @@ textarea {
 
   .main-page {
     background: url('images/desktop-homeBG.jpeg');
-    padding: 140px 260px;
+    padding: 80px 200px;
   }
 
   .home-page-details {

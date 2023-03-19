@@ -123,38 +123,38 @@ for (let i = 0; i < portfolioArray.length; i += 1) {
                <h2 class="work-title">${portfolioArray[i].projectName}</h2>
                <ul>
                  <li><h3 class="work-client h3-common-styles">${
-                   portfolioArray[i].company
-                 }</h3></li>
+  portfolioArray[i].company
+}</h3></li>
                  <li><img src="images/dot.png" alt="Canopy icon image" /></li>
                  <li>
                    <h3 class="work-role h3-common-styles">${
-                     portfolioArray[i].role
-                   }</h3>
+  portfolioArray[i].role
+}</h3>
                  </li>
                  <li><img src="images/dot.png" alt="Backend icon image" /></li>
                  <li><h3 class="work-year h3-common-styles">${
-                   portfolioArray[i].year
-                 }</h3></li>
+  portfolioArray[i].year
+}</h3></li>
                </ul>
                <p class="work-description">
                  ${portfolioArray[i].description}
                </p>
                <ul class="works-btns">
                  <li><button type="button" class="works-btn">${
-                   portfolioArray[i].htmlSkill
-                 }</button></li>
+  portfolioArray[i].htmlSkill
+}</button></li>
                  <li><button type="button" class="works-btn">${
-                   portfolioArray[i].cssSkill
-                 }</button></li>
+  portfolioArray[i].cssSkill
+}</button></li>
                  <li>
                    <button type="button" class="works-btn">${
-                     portfolioArray[i].javascriptSkill
-                   }</button>
+  portfolioArray[i].javascriptSkill
+}</button>
                  </li>
                </ul>
                <button id=${portfolioArray.indexOf(
-                 i
-               )} class="see-project-btn seeWork1Btn" type="button">
+    i,
+  )} class="see-project-btn seeWork1Btn" type="button">
                  See Project
                </button>
              </div>
